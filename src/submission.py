@@ -66,7 +66,8 @@ class Predictor:
 # Run this file using `python3 submission.py`
 if __name__ == '__main__':
 
-    for img_name in glob('example_images/*'):
+    # for img_name in glob('example_images/*'):
+    for img_name in glob('train/0123/*'):
         # Open an example image using the PIL library
         example_image = Image.open(img_name)
 
@@ -77,7 +78,7 @@ if __name__ == '__main__':
         print(prediction)
 
         # Visualize the image
-        pieces = utils.get_uniform_rectangular_split(np.asarray(example_image), 2, 2)
+        # pieces = utils.get_uniform_rectangular_split(np.asarray(example_image), 2, 2)
         # Example images are all shuffled in the "3120" order
-        final_image = Image.fromarray(np.vstack((np.hstack((pieces[3],pieces[1])),np.hstack((pieces[2],pieces[0])))))
-        final_image.show()
+        # final_image = Image.fromarray(np.vstack((np.hstack((pieces[int(predictor[0])],pieces[int(predictor[1])])),np.hstack((pieces[int(predictor[2])],pieces[int(predictor[3])])))))
+        # final_image.show()
