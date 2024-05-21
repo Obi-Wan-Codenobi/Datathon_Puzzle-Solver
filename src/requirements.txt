@@ -2,3 +2,4 @@ numpy==1.23.3
 keras
 tensorflow==2.10.0
 pillow==9.2.0
+requests>=2.32.0 # not directly required, pinned by Snyk to avoid a vulnerability
